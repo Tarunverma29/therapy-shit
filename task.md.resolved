@@ -1,0 +1,29 @@
+# Therapy Booking Platform Tasks
+
+## Phase 1: Project Setup
+- [/] Initialize Frontend (React + Vite)
+- [/] Initialize Backend (FastAPI + Uvicorn)
+- [ ] Set up PostgreSQL Database Connection (SQLAlchemy)
+
+## Phase 2: User Authentication
+- [ ] Create User Database Model (Email, Password, Name, Mobile, Profession)
+- [ ] Implement Backend Auth Endpoints (Signup, Login)
+- [ ] Build Frontend Auth Pages (Signup/Login)
+- [ ] Implement Auth State Management in React
+
+## Phase 3: Core Navigation
+- [ ] Build Landing Page (Choice between Offline and Online)
+- [ ] Implement Protected Routes in React
+
+## Phase 4: Offline Therapy (Local)
+- [ ] Backend APIs for fetching local therapists
+- [ ] Integrate Anime.js for UI Map Animations
+- [ ] Build Isometric City Map View
+- [ ] Therapist Avatars and Interactive Hovers
+- [ ] Therapist Detail Modal (Type, Rating, Reviews, Pricing, Slots)
+
+## Phase 5: Online Therapy (Global)
+- [ ] Backend APIs for fetching global therapists by continent/country
+- [ ] Build Interactive 7-Segment Continent Ring
+- [ ] Continent Hover & Selection Maps
+- [ ] Country Selection and Therapist Listing
