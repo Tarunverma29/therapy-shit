@@ -1,25 +1,5 @@
-/* Premium Authentication Styling */
-:root {
-  --primary: #4F46E5;
-  --primary-hover: #4338CA;
-  --bg-dark: #0F172A;
-  --bg-card: rgba(30, 41, 59, 0.7);
-  --text-main: #F8FAFC;
-  --text-muted: #94A3B8;
-  --border-color: rgba(255, 255, 255, 0.1);
-  --error: #EF4444;
-  --success: #10B981;
-}
-
-body {
-  margin: 0;
-  font-family: 'Inter', system-ui, sans-serif;
-  background-color: var(--bg-dark);
-  color: var(--text-main);
-  background-image: radial-gradient(circle at top right, rgba(79, 70, 229, 0.15), transparent 40%),
-                    radial-gradient(circle at bottom left, rgba(79, 70, 229, 0.15), transparent 40%);
-  background-attachment: fixed;
-}
+/* Authentication Page Styling */
+/* CSS vars are now defined globally in index.css */
 
 .auth-container {
   display: flex;
@@ -118,9 +98,11 @@ body {
   left: 1rem;
   color: var(--text-muted);
   transition: color 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
 }
 
-.input-group input, 
+.input-group input,
 .input-group select {
   width: 100%;
   padding: 1rem 1rem 1rem 3rem;
@@ -141,14 +123,15 @@ body {
   background: rgba(15, 23, 42, 0.8);
 }
 
-.input-group input:focus + .input-icon,
-.input-group input:not(:placeholder-shown) + .input-icon {
-  color: var(--primary);
-}
-
 .input-group select {
   appearance: none;
   cursor: pointer;
+}
+
+/* Option styling for select dropdowns */
+.input-group select option {
+  background: #1e293b;
+  color: var(--text-main);
 }
 
 .primary-btn {
@@ -174,6 +157,7 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.5);
   background: linear-gradient(135deg, var(--primary-hover), var(--primary));
+  border-color: transparent;
 }
 
 .primary-btn:active {
@@ -199,7 +183,8 @@ body {
   text-decoration: underline;
 }
 
-.auth-error, .auth-success {
+.auth-error,
+.auth-success {
   padding: 1rem;
   border-radius: 12px;
   margin-bottom: 1.5rem;
@@ -224,9 +209,11 @@ body {
   .two-col-form {
     grid-template-columns: 1fr;
   }
+
   .full-width {
     grid-column: span 1;
   }
+
   .auth-card {
     padding: 2rem;
   }
